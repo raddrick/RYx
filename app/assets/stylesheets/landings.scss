@@ -3,5 +3,5 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background: url('<%= asset_path('rym_backdrop.png') %>') 50% 50% fixed white;
+  background: url('<%= asset_path("rym_backdrop.png") %>') 50% 50% fixed white;
 }
