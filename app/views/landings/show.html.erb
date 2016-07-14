@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<%= render 'home/index' %>
 
-<%= link_to 'Edit', edit_landing_path(@landing) %> |
-<%= link_to 'Back', landings_path %>
+<%= link_to 'Edit', edit_article_path(@landing) unless @current_user.blank? %>
+
+<h1><%= @landing.name %></h1>
+<%= GitHub::Markup.render('README.markdown', @landing.body.to_s) %>
+
+<% @landing.articles.each do |article| %>
+  <%= render 'articles/show', locals: { article: article } %>
+<% end %>
+
