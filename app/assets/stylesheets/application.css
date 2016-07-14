@@ -10,6 +10,15 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'bootstrap/bootstrap'
+ *= require 'font-awesome/font-awesome'
+ *= require 'fontello/fontello'
+ *= require 'magnific-popup/magnific-popup'
+ *= require 'rs-plugin/settings'
+ *= require 'owl-carousel/owl.carousel'
+ *= require 'owl-carousel/owl.transitions'
+ *= require 'hover/hover-min'
+ *= require 'jquery.countdown/jquery.countdown'
  *= require_tree .
  *= require_self
  */

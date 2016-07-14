@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+// This is a manifest file that'll be compiled into application, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -12,5 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require rs-plugin/jquery.themepunch.tools.min
+//= require rs-plugin/jquery.themepunch.revolution.min
+//= require waypoints/jquery.waypoints
+//= require jquery.countTo
+//= require jquery.parallax-1.1.3
+//= require jquery.validate
+//= require vide/jquery.vide
+//= require jquery.browser
+//= require jquery.countdown/jquery.plugin
+//= require jquery.countdown/jquery.countdown
+//= require magnific-popup/jquery.magnific-popup
 //= require turbolinks
+//= require bootstrap/bootstrap
+//= require modernizr
+//= require isotope/isotope.pkgd
+//= require owl-carousel/owl.carousel
+//= require SmoothScroll
+//= require coming.soon.config
 //= require_tree .
