@@ -30,4 +30,5 @@
 //= require owl-carousel/owl.carousel
 //= require SmoothScroll
 //= require coming.soon.config
+//= require google.map.config
 //= require_tree .
