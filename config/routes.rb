@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :landings
+  resources :users
 
   # Example resource route with options:
   #   resources :products do
