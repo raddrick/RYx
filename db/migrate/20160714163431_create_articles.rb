@@ -4,9 +4,9 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :stub
       t.text :body
-      t.reference :landing
+      t.references :landing
       t.boolean :published, default: false
-      t.reference :author
+      t.references :author
       t.date :publish_by
 
       t.timestamps null: false
