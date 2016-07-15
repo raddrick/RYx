@@ -1,7 +1,7 @@
           <% if (config == 1) %>
-            <%= image_tag "/assets/#{speaker}.jpg", alt:"", height:"500px" %>
+            <%= image_tag image_path("#{speaker}.jpg"), alt:"", height:"500px" %>
           <% else %>
-            <%= image_tag "/assets/#{speaker}.jpg", alt:"", class:"to-right-block", height:"500px" %>
+            <%= image_tag image_path("#{speaker}.jpg"), alt:"", class:"to-right-block", height:"500px" %>
           <% end %>
           <div class="full-image-overlay text-center">
             <h3>Talk Title <i class="fa fa-heart"></i></h3>

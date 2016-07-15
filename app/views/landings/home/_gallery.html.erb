@@ -28,7 +28,7 @@
                 <div class="item active">
                   <div class="image-box text-center">
                     <div class="overlay-container overlay-visible">
-                      <%= image_tag "/assets/valencia/event/inaugural_crew.jpg", alt:"" %>
+                      <%= image_tag image_path("valencia/event/inaugural_crew.jpg"), alt:"" %>
                       <a href="/assets/valencia/event/inaugural_crew.jpg" class="popup-img overlay-link" title="image caption"><i class="fa fa-plus"></i></a>
                       <div class="overlay-bottom hidden-xs">
                         <div class="text">
@@ -41,11 +41,11 @@
                 <div class="item">
                   <div class="image-box text-center">
                     <div class="overlay-container overlay-visible">
-                      <%= image_tag "/assets/valencia/event/valencia_speakers.jpg", alt:"" %>
+                      <%= image_tag image_path("valencia/event/valencia_speakers.jpg"), alt:"" %>
                       <a href="/assets/valencia/event/valencia_speakers.jpg" class="popup-img overlay-link" title="image caption"><i class="fa fa-plus"></i></a>
                       <div class="overlay-bottom hidden-xs">
                         <div class="text">
-                          <p class="lead margin-clear">Props to the inaugural speakers</p>
+                          <p class="lead margin-clear">The inaugural speakers</p>
                         </div>
                       </div>
                     </div>
@@ -56,7 +56,7 @@
           </div>
 
           <%
-            assets = { path: '/assets/valencia/event/',
+            assets = { path: 'valencia/event/',
               audience: ['audience_1.jpg','audience_2.jpg','audience_3.jpg','audience_4.jpg','audience_5'],
               speakers: ['speaker_casey.jpg', 'speaker_casey_2.jpg','speaker_elodie.jpg','speaker_pam.jpg','speaker_patrick.jpg','speaker_patrick_2.jpg','staff_speaker.jpg']
             }
