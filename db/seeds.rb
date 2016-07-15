@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Landing.create title: 'Welcome to RYx', body: "RYx was created by Magellan"
+Landing.create name: 'Welcome to RYx', body: "RYx was created by Magellan"
