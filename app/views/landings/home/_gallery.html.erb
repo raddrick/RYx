@@ -1,0 +1,77 @@
+        <div class="container">
+          <div class="row">
+            <h2 class="text-center text-muted logo-font">Photo <span class="text-default">Gallery</span></h2>
+            <div class="separator"></div>
+            <p class="lead text-center">Please enjoy the photos from the inaugrual even in Valencia, Spain</p>
+          </div>
+          <!-- isotope filters start -->
+          <div class="filters text-center">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".speakers">Speakers</a></li>
+              <li><a href="#" data-filter=".audience">Audience</a></li>
+            </ul>
+          </div>
+          <!-- isotope filters end -->
+        </div>
+        <div class="isotope-container row grid-space-0">
+          <div class="col-sm-6 col-md-3 isotope-item the-bride">
+            <div id="carousel-portfolio" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators top">
+                <li data-target="#carousel-portfolio" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-portfolio" data-slide-to="1"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <div class="image-box text-center">
+                    <div class="overlay-container overlay-visible">
+                      <%= image_tag "/assets/valencia/event/inaugural_crew.jpg", alt:"" %>
+                      <a href="/assets/valencia/event/inaugural_crew.jpg" class="popup-img overlay-link" title="image caption"><i class="fa fa-plus"></i></a>
+                      <div class="overlay-bottom hidden-xs">
+                        <div class="text">
+                          <p class="lead margin-clear">The inaugural staff and speakers</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="image-box text-center">
+                    <div class="overlay-container overlay-visible">
+                      <%= image_tag "/assets/valencia/event/valencia_speakers.jpg", alt:"" %>
+                      <a href="/assets/valencia/event/valencia_speakers.jpg" class="popup-img overlay-link" title="image caption"><i class="fa fa-plus"></i></a>
+                      <div class="overlay-bottom hidden-xs">
+                        <div class="text">
+                          <p class="lead margin-clear">Props to the inaugural speakers</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <%
+            assets = { path: '/assets/valencia/event/',
+              audience: ['audience_1.jpg','audience_2.jpg','audience_3.jpg','audience_4.jpg','audience_5'],
+              speakers: ['speaker_casey.jpg', 'speaker_casey_2.jpg','speaker_elodie.jpg','speaker_pam.jpg','speaker_patrick.jpg','speaker_patrick_2.jpg','staff_speaker.jpg']
+            }
+
+            num = Random.new
+            gallery_images = []
+            ['audience','speakers'].cycle(4) do |css|
+              length = assets[css.to_sym].length
+              image = assets[css.to_sym].slice!(num.rand(length))
+              gallery_images << ["#{assets[:path]}#{image}", css]
+            end
+          %>
+
+        <% 7.times do |index| %>
+          <%= render partial: 'landings/home/slide', locals: { image: gallery_images[index] } %>
+        <% end %>
+        </div>
+

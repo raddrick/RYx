@@ -1,11 +1,12 @@
-<%= render 'home/index' %>
+<% if current_page?(root_url) %>
+  <%= render 'landings/home/index' %>
+<% else %>
+  <%= link_to 'Edit', edit_article_path(@landing) unless @current_user.blank? %>
 
-<%= link_to 'Edit', edit_article_path(@landing) unless @current_user.blank? %>
+  <h1><%= @landing.name %></h1>
+  <%= GitHub::Markup.render('README.markdown', @landing.body.to_s) %>
 
-<h1><%= @landing.name %></h1>
-<%= GitHub::Markup.render('README.markdown', @landing.body.to_s) %>
-
-<% @landing.articles.each do |article| %>
-  <%= render 'articles/show', locals: { article: article } %>
+  <% @landing.articles.each do |article| %>
+    <%= render 'articles/show', locals: { article: article } %>
+  <% end %>
 <% end %>
-

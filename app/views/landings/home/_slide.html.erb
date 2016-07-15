@@ -1,0 +1,13 @@
+          <div class="col-sm-6 col-md-3 isotope-item <%= image.last %>">
+            <div class="image-box text-center">
+              <div class="overlay-container overlay-visible" style="overflow: hidden;">
+                <%= image_tag image.first, alt:"" %>
+                <a href="<%= image.first %>" class="popup-img overlay-link" title="image caption"><i class="fa fa-plus"></i></a>
+                <div class="overlay-bottom hidden-xs" display='none'>
+                  <div class="text">
+                    <p class="lead margin-clear"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>

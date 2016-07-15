@@ -1,32 +1,14 @@
-          <%= image_tag "/assets/wedding-bride.jpg", alt:"", class:"to-right-block" %>
+          <% if (config == 1) %>
+            <%= image_tag "/assets/#{speaker}.jpg", alt:"", height:"500px" %>
+          <% else %>
+            <%= image_tag "/assets/#{speaker}.jpg", alt:"", class:"to-right-block", height:"500px" %>
+          <% end %>
           <div class="full-image-overlay text-center">
-            <h3>Yes <i class="fa fa-heart"></i></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ab provident consequuntur, dolores perferendis! Quae asperiores rerum aperiam doloribus nostrum. Dolorem sint a fuga pariatur. Non, voluptatibus culpa ullam animi.</p>
+            <h3>Talk Title <i class="fa fa-heart"></i></h3>
+            <p>Talk Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ab provident consequuntur, dolores perferendis! Quae asperiores rerum aperiam doloribus nostrum. Dolorem sint a fuga pariatur. Non, voluptatibus culpa ullam animi.</p>
             <ul class="social-links circle animated-effect-1 text-center">
               <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
               <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
               <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
             </ul>
           </div>
-
-          <!-- <%= image_tag "/assets/wedding-bride.jpg", alt:"", class:"to-right-block" %>
-          <div class="full-image-overlay text-center">
-            <h3>Yes <i class="fa fa-heart"></i></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ab provident consequuntur, dolores perferendis! Quae asperiores rerum aperiam doloribus nostrum. Dolorem sint a fuga pariatur. Non, voluptatibus culpa ullam animi.</p>
-            <ul class="social-links circle animated-effect-1 text-center">
-              <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-              <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-              <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div> -->
-
-          <!-- <%= image_tag "/assets/wedding-groom.jpg", alt:"" %>
-          <div class="full-image-overlay text-center">
-            <h3>My <i class="fa fa-heart"></i> Is Yours</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ab provident consequuntur, dolores perferendis! Quae asperiores rerum aperiam doloribus nostrum. Dolorem sint a fuga pariatur. Non, voluptatibus culpa ullam animi.</p>
-            <ul class="social-links circle animated-effect-1 text-center">
-              <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-              <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-              <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div> -->
