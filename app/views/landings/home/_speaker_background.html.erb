@@ -7,9 +7,18 @@
             <h3><%= title %></h3>
             <p><%= description %></p>
             <ul class="social-links circle animated-effect-1 text-center">
-              <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-              <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-              <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+              <% unless facebook.blank? %>
+              <li class="facebook"><a target="_blank" href="https://www.facebook.com/<%= facebook %>"><i class="fa fa-facebook"></i></a></li>
+              <% end %>
+              <% unless twitter.blank? %>
+              <li class="twitter"><a target="_blank" href="https://www.twitter.com/<%= twitter %>"><i class="fa fa-twitter"></i></a></li>
+              <% end %>
+              <% unless linkedin.blank? %>
+              <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/in/<%= linkedin %>"><i class="fa fa-linkedin"></i></a></li>
+              <% end %>
+              <% unless instagram.blank? %>
+              <li class="instagram"><a target="_blank" href="https://www.instagram.com/<%= instagram %>"><i class="fa fa-instagram"></i></a></li>
+              <% end %>
             </ul>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= stub %>" frameborder="0" allowfullscreen></iframe>
           </div>
