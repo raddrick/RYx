@@ -14,7 +14,7 @@
 					mapTypeId: google.maps.MapTypeId.ROADMAP,
 					center: myLatlng,
 					scrollwheel: false,
-					key: 'AIzaSyBmzxjo3-QkChWyo-zS1K1g8HGPY_jLEdI'
+					key: "AIzaSyA_en74RGVTBfmb_mZsBIrgWTcKb94aNlA"
 				};
 				map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 				marker = new google.maps.Marker({
