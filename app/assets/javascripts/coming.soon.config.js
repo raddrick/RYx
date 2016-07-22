@@ -1,7 +1,7 @@
 (function($){
 	$(document).ready(function(){
 		// Set the time at which the countdown expires.
-		// var untilDate new Date(Year, Month - 1, Day)
+		// var untilDate new Date(Year, Month - 1, Day, Hours -1, minutes)
 		//-----------------------------------------------
 		var untilDate = new Date(Date.UTC(2016, 7 - 1, 25, 18 - 1, 30));
 
