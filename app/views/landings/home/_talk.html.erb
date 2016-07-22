@@ -1,8 +1,11 @@
           <div class="text-center">
-            <h2><%= title %></h2>
-            <p><%= description %></p>
+            <h2><%= speaker[:title] %></h2>
+            <p><%= speaker[:description] %></p>
             <!-- 4:3 aspect ratio -->
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= stub %>" frameborder="0" allowfullscreen></iframe>
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= speaker[:video] %>" frameborder="0" allowfullscreen></iframe>
             </div>
+          </div>
+          <div class="visible-m hidden-lg text-center container">
+            <%= render partial: 'landings/home/speaker_bio', locals: speaker %>
           </div>

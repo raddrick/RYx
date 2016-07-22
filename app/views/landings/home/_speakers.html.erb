@@ -3,16 +3,18 @@
       <section class="full-width-section">
         <div class="full-image-container default-bg">
         <%= render partial: 'landings/home/speaker', locals: casey = {
-                  speaker: 'Casey Carr-Jones',
-                  bio: 'Casey Carr-Jones is a Human Resources professional well-versed in employee relations and talent management.  Prior to joining Remote Year, she was Vice President of HR and Operations for a financial services company in Manhattan. Casey is currently freelance consulting, providing HR services to several companies with the goal of improving productivity, communication, and efficiency.  To date, Casey has terminated over 100 employees and more than 20 third-party vendors.',
-                  image: 'valencia/casey_profile',
-                  instagram: 'apackedsuitcase_y',
-                  facebook: 'casey.carr.jones',
-                  linkedin: 'acaseycarrjones',
-                  twitter: '',
-                  title: 'The Terminator: Handling termination of a job or project with grace',
-                  description: '',
-                  stub: '6W2Wd2GTqnc',
+                  speaker: {
+                    name: 'Casey Carr-Jones',
+                    bio: 'Casey Carr-Jones is a Human Resources professional well-versed in employee relations and talent management.  Prior to joining Remote Year, she was Vice President of HR and Operations for a financial services company in Manhattan. Casey is currently freelance consulting, providing HR services to several companies with the goal of improving productivity, communication, and efficiency.  To date, Casey has terminated over 100 employees and more than 20 third-party vendors.',
+                    image: 'valencia/casey_profile',
+                    instagram: 'apackedsuitcase_y',
+                    facebook: 'casey.carr.jones',
+                    linkedin: 'acaseycarrjones',
+                    twitter: '',
+                    title: 'The Terminator: Handling termination of a job or project with grace',
+                    description: '',
+                    video: '6W2Wd2GTqnc'
+                  },
                   config: 1
                 } %>
         </div>
@@ -27,16 +29,18 @@
       <section class="full-width-section">
         <div class="full-text-container left light-gray-bg border-clear text-right">
           <%= render partial: 'landings/home/talk', locals: patrick = {
-                  speaker: 'Patrick Loughan',
-                  bio: 'Patrick Loughran is a screenwriter. He previously worked in publishing for Penguin Books, and before that in journalism. He has also read lots of books about storytelling, and tried & failed to write several novels. He thinks all this qualifies him to talk about stories for 7 minutes.',
-                  image: 'valencia/patrick_profile',
-                  instagram: '',
-                  facebook: '',
-                  linkedin: '',
-                  twitter: '',
-                  title: 'What makes a story GOOD?',
-                  description: '',
-                  stub: 'nFhuGIMfjnk',
+                  speaker: {
+                    name: 'Patrick Loughan',
+                    bio: 'Patrick Loughran is a screenwriter. He previously worked in publishing for Penguin Books, and before that in journalism. He has also read lots of books about storytelling, and tried & failed to write several novels. He thinks all this qualifies him to talk about stories for 7 minutes.',
+                    image: 'valencia/patrick_profile',
+                    instagram: '',
+                    facebook: '',
+                    linkedin: '',
+                    twitter: '',
+                    title: 'What makes a story GOOD?',
+                    description: '',
+                    video: 'nFhuGIMfjnk'
+                  },
                   config: 2
                 } %>
         </div>
@@ -51,16 +55,18 @@
       <section class="full-width-section">
         <div class="full-image-container default-bg">
         <%= render partial: 'landings/home/speaker', locals: elodie = {
-                  speaker: 'Elodie Joubert',
-                  bio: 'Elodie Joubert is a dual French-American citizen with a degree in Intercultural Management/Religious Mediation, and lifelong exposure to various languages and cultures. She works with international students all around the world to help their dream come true: travel to the United States to study English in full-immersion intensive programs. She speaks French, English, Spanish, German, and basic Korean.',
-                  image: 'valencia/elodie_profile',
-                  linkedin: 'elodie-joubert-72399348',
-                  facebook: 'elodie.joubert.54',
-                  instagram: 'el_joubear',
-                  twitter: '',
-                  title: 'A personal European story',
-                  description: '',
-                  stub: 'npyrIYCU-Ss',
+                  speaker: {
+                    name: 'Elodie Joubert',
+                    bio: 'Elodie Joubert is a dual French-American citizen with a degree in Intercultural Management/Religious Mediation, and lifelong exposure to various languages and cultures. She works with international students all around the world to help their dream come true: travel to the United States to study English in full-immersion intensive programs. She speaks French, English, Spanish, German, and basic Korean.',
+                    image: 'valencia/elodie_profile',
+                    linkedin: 'elodie-joubert-72399348',
+                    facebook: 'elodie.joubert.54',
+                    instagram: 'el_joubear',
+                    twitter: '',
+                    title: 'A personal European story',
+                    description: '',
+                    video: 'npyrIYCU-Ss'
+                  },
                   config: 1
                 } %>
         </div>
@@ -75,16 +81,18 @@
       <section class="full-width-section">
         <div class="full-text-container left light-gray-bg border-clear text-right">
           <%= render partial: 'landings/home/talk', locals: pamela = {
-                  speaker: 'Pamela Welburn',
-                  bio: 'Pamela is a chartered geologist who has worked in the environmental industry for over 18 years, specialising in the redevelopment of land affected by contamination. Over the years she has worked for a number of large petroleum, chemical, pharmaceutical and manufacturing clients assessing and remediating their land.  Pamela is also a published author on ‘remediating and mitigating risk from volatile organic compound (VOC) vapours’.  Pamela has travelled extensively visiting diverse countries such as India, Bhutan, Senegal, Madagascar, Bolivia and Guatemala.',
-                  image: 'valencia/pam_profile',
-                  linkedin: 'pamela-welburn-36884340',
-                  twitter: 'pamela_welburn',
-                  instagram: '',
-                  facebook: '',
-                  title: 'Sustainable Travel',
-                  description: '',
-                  stub: 'V7deLeAQ_0Y',
+                  speaker: {
+                    name: 'Pamela Welburn',
+                    bio: 'Pamela is a chartered geologist who has worked in the environmental industry for over 18 years, specialising in the redevelopment of land affected by contamination. Over the years she has worked for a number of large petroleum, chemical, pharmaceutical and manufacturing clients assessing and remediating their land.  Pamela is also a published author on ‘remediating and mitigating risk from volatile organic compound (VOC) vapours’.  Pamela has travelled extensively visiting diverse countries such as India, Bhutan, Senegal, Madagascar, Bolivia and Guatemala.',
+                    image: 'valencia/pam_profile',
+                    linkedin: 'pamela-welburn-36884340',
+                    twitter: 'pamela_welburn',
+                    instagram: '',
+                    facebook: '',
+                    title: 'Sustainable Travel',
+                    description: '',
+                    video: 'V7deLeAQ_0Y'
+                  },
                   config: 2
                 } %>
         </div>

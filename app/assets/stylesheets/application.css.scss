@@ -23,3 +23,14 @@
  *= require_self
  */
 
+@media screen and (max-width: 400px) {
+  .full-image-overlay-1 {
+    display: auto;
+    top: 30%;
+  }
+
+  .full-image_overlay-2 {
+    display: auto;
+    top: 70%;
+  }
+}
