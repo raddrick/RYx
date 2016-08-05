@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714165004) do
+ActiveRecord::Schema.define(version: 20160805030139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,29 @@ ActiveRecord::Schema.define(version: 20160714165004) do
     t.text     "body"
   end
 
+  create_table "speakers", force: :cascade do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.string   "instagram"
+    t.string   "facebook"
+    t.string   "linkedin"
+    t.string   "twitter"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image_url"
+  end
+
+  create_table "talks", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "video"
+    t.integer  "speaker_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "talks", ["speaker_id"], name: "index_talks_on_speaker_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "username"
@@ -42,4 +65,5 @@ ActiveRecord::Schema.define(version: 20160714165004) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "talks", "speakers"
 end
