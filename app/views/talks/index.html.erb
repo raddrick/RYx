@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+  <% @talks.each do |talk| %>
+    <div class="col-xs-6 col-md-4 col-lg-2">
+    <%= link_to talk do %>
+      <img src="https://i.ytimg.com/vi/<%= talk.video %>/hqdefault.jpg">
+      <%= talk.speaker.name %><br>
+      <%= talk.title %><br>
+      <%# talk.description %><br>
+    <% end %>
+    </div>
+  <% end %>
+  </div>
+</div>
