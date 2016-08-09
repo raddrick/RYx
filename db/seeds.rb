@@ -8,6 +8,7 @@
 
 Landing.find_or_create_by name: 'Welcome to RYx', body: "RYx was created by Magellan"
 Landing.find_or_create_by name: 'About', body: "About RYxGlobal"
+Landing.find_or_create_by name: 'Team', body: "The RYxGlobal Team"
 
 #TODO we are seeding speakers because we do not want to go live with
 #  CMS features for Speakers/Talks but we do want the UI features
