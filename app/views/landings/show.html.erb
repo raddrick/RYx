@@ -1,5 +1,7 @@
 <% if current_page?(root_url) %>
   <%= render 'landings/home/index' %>
+<% elsif current_page?(about_url) %>
+  <%= render 'landings/about/index' %>
 <% else %>
   <%= link_to 'Edit', edit_article_path(@landing) unless @current_user.blank? %>
 
