@@ -30,11 +30,15 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
+    # Initializes a Markdown parser
+    markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+
+    puts markdown.render article_params[:body]
     @article = Article.new(article_params)
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to articles_url, notice: 'Article was successfully created.' }
         format.json { render :index, status: :created, location: @article }
       else
         format.html { render :new }
@@ -48,7 +52,7 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to articles_url, notice: 'Article was successfully updated.' }
         format.json { render :index, status: :ok, location: @article }
       else
         format.html { render :edit }
@@ -78,3 +82,4 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :stub, :body, :landing_id, :published, :author_id, :publish_by)
     end
 end
+

@@ -16,19 +16,21 @@
         <div class="row">
           <div class="col-xs-12 col-sm-8">
             <h1><%= article.title %></h1>
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to article do %><i class="fa fa-file"></i><% end %>
+                <%= link_to edit_article_path(article) do %><i class="fa fa-pencil"></i><% end %>
+                <%= link_to article, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash"></i><% end %>
+              </div>
+            </div>
           </div>
-          <div class="col-xs-12 col-sm-4 pull-right">
-            <span><%= link_to 'Show', article %> </span>
-            <span><%= link_to 'Edit', edit_article_path(article) %> </span>
-            <span><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> </span>
-          </div>
-          <div class="col-xs-12">
-            <small><%= article.author %></small>
+          <div class="col-xs-8">
+            <small><%= article.author.name %></small>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12">
-            <%= article.body %>
+          <div class="col-xs-8">
+            <%= markdown.render(article.body).html_safe %>
           </div>
         </div>
     <% end %>
