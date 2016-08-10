@@ -2,24 +2,10 @@
       <!-- ================ -->
       <section class="full-width-section">
         <div class="full-image-container default-bg">
-        <%= render partial: 'landings/home/speaker', locals: casey = {
-                  speaker: {
-                    name: 'Casey Carr-Jones',
-                    bio: 'Casey Carr-Jones is a Human Resources professional well-versed in employee relations and talent management.  Prior to joining Remote Year, she was Vice President of HR and Operations for a financial services company in Manhattan. Casey is currently freelance consulting, providing HR services to several companies with the goal of improving productivity, communication, and efficiency.  To date, Casey has terminated over 100 employees and more than 20 third-party vendors.',
-                    image: 'valencia/casey',
-                    instagram: 'apackedsuitcase_y',
-                    facebook: 'casey.carr.jones',
-                    linkedin: 'acaseycarrjones',
-                    twitter: '',
-                    title: 'The Terminator: Handling termination of a job or project with grace',
-                    description: '',
-                    video: 'UOB-DExRhCo'
-                  },
-                  config: 1
-                } %>
+        <%= render partial: 'landings/home/speaker', locals: { speaker: speaker, talk: talk, config: 1 } %>
         </div>
         <div class="full-text-container default-bg">
-          <%= render partial: 'landings/home/talk', locals: casey %>
+          <%= render partial: 'landings/home/talk', locals: {speaker:speaker, talk: talk} %>
         </div>
       </section>
       <!-- section end -->

@@ -36,7 +36,7 @@
       </section>
       <!-- section end -->
 
-      <%= render 'landings/home/speakers' %>
+      <%= render partial: 'landings/home/speakers', locals: { speaker: @speaker, talk: @talk } %>
 
       <!-- section start -->
       <!-- ================ -->
