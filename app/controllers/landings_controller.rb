@@ -64,7 +64,11 @@ class LandingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_landing
+      offset = rand(Speaker.count)
+
       @landing = Landing.find(params[:id])
+      @speaker = Speaker.offset(offset).first
+      @talk = @speaker.talks.first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
