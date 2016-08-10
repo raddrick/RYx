@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 gem 'rails_12factor'
-# gem 'twitter-bootstrap-rails'
+gem 'jquery-ui-rails'
 
 gem 'redcarpet'
 gem 'github-markup'

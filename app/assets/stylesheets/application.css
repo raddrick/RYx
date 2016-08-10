@@ -19,6 +19,8 @@
  *= require owl-carousel/owl.transitions
  *= require hover/hover-min
  *= require jquery.countdown/jquery.countdown
+ *= require jquery-ui/core
+ *= require jquery-ui/theme
  *= require_tree .
  *= require_self
  */
