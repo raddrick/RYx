@@ -1,0 +1,2 @@
+$("#myModal-<%= @article.id %>").empty();
+$("<%= escape_javascript(render 'show') %>").appendTo("#myModal-<%= @article.id %>");

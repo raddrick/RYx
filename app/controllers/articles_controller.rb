@@ -10,6 +10,12 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    respond_to do |format|
+      format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+      format.json { render :show, status: :ok, location: @article }
+      format.js
+    end
+
   end
 
   # GET /articles/new
@@ -29,7 +35,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
+        format.json { render :index, status: :created, location: @article }
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
@@ -43,7 +49,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-        format.json { render :show, status: :ok, location: @article }
+        format.json { render :index, status: :ok, location: @article }
       else
         format.html { render :edit }
         format.json { render json: @article.errors, status: :unprocessable_entity }
@@ -69,6 +75,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :stub, :body, :landing, :published, :author, :publish_by)
+      params.require(:article).permit(:title, :stub, :body, :landing_id, :published, :author_id, :publish_by)
     end
 end

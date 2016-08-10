@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-  <div class="row">
+<div class="container panel panel-default">
+  <div class="row panel-body">
     <p class="form-control-static">
       <strong class="col-xs-2">Title:</strong>
       <div class="col-xs-10"><%= @article.title %></div>
@@ -35,9 +35,5 @@
       <strong class="col-xs-2">Publish by:</strong>
       <div class="col-xs-10"><%= @article.publish_by %></div>
     </p>
-    <div class="pull-right">
-      <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %> |
-      <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
-    </div>
   </div>
 </div>

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :landings
   # resources :speakers
   resources :talks
-  # resources :articles
+  resources :articles
   # resources :users
 
   # Example resource route with options:
