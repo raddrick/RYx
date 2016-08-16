@@ -1,36 +1,64 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-    &nbsp;
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="text-center">
-        <h1>RYx Speaker Series</h1>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-    &nbsp;
-    </div>
-  </div>
-  <div class="row">
-  <% @talks.each do |talk| %>
-    <div class="col-xs-6 col-md-4 col-lg-2">
-    <%= link_to talk do %>
-      <img src="https://i.ytimg.com/vi/<%= talk.video %>/hqdefault.jpg" alt="<%= talk.description %>">
-      <%= talk.speaker.name %><br>
-      <strong><%= talk.title %></strong>
-    <% end %>
-    </div>
-  <% end %>
-  </div>
-</div>
-  <div class="row">
-    <div class="col-xs-12">
-    &nbsp;
-    </div>
-  </div>
+
+<!-- main-container start -->
+      <!-- ================ -->
+      <section class="main-container">
+
+        <div class="container">
+          <div class="row">
+
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-md-12">
+
+              <!-- page-title start -->
+              <!-- ================ -->
+              <h1 class="page-title logo-font">Talks</h1>
+              <div class="separator-2"></div>
+              <!-- page-title end -->
+              <p class="lead">Enjoy the talks from Valencia and Lisbon!</p>
+
+              <!-- isotope filters start -->
+              <div class="filters">
+                <ul class="nav nav-pills">
+                  <li class="active"><a href="#" data-filter="*">All</a></li>
+                  <li><a href="#" data-filter=".valencia">Valencia</a></li>
+                  <li><a href="#" data-filter=".lisbon">Lisbon</a></li>
+                  <li><a href="#" data-filter=".rabat">rabat</a></li>
+                </ul>
+              </div>
+              <!-- isotope filters end -->
+
+              <div class="isotope-container-fitrows row grid-space-10">
+              <% @talks.each do |talk| %>
+                <div class="col-sm-6 col-md-3 isotope-item valencia">
+                  <div class="image-box style-2 mb-20 shadow bordered light-gray-bg text-center">
+                    <div class="overlay-container">
+                      <%= link_to talk do %>
+                        <img src="https://i.ytimg.com/vi/<%= talk.video %>/hqdefault.jpg" alt="<%= talk.description %>">
+                      <% end %>
+                      <div class="overlay-to-top">
+                        <p class="small margin-clear"><%= talk.speaker.name %></p>
+                      </div>
+                    </div>
+                    <div class="body">
+                      <h3><%= talk.title %></h3>
+                      <div class="separator"></div>
+                      <p><%= talk.description %></p>
+                      <%= link_to talk, class: "btn btn-default btn-sm btn-hvr hvr-shutter-out-horizontal margin-clear" do %>
+                      Read More<i class="fa fa-arrow-right pl-10"></i>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+              </div>
+
+            </div>
+            <!-- main end -->
+
+          </div>
+        </div>
+      </section>
+      <!-- main-container end -->
+
