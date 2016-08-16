@@ -21,11 +21,17 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :landings
+  # resources :landings
   # resources :speakers
-  resources :talks
+  # resources :talks
   resources :articles
   # resources :users
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: redirect('/')
+
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+  get '/talks/:id(.:format)' =>'talks#show', as: 'talk'
 
   # Example resource route with options:
   #   resources :products do

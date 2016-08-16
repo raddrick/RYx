@@ -1,3 +1,6 @@
+.btn:visited { color: white;  }
+.btn-white:visited { color: #337ab7; }
+
 .v-offset  { margin: 2px 0; }
 .v-offset-1 { margin: 5px 0; }
 .v-offset-2 { margin: 10px 0 ; }

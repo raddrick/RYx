@@ -5,6 +5,7 @@ ruby '2.3.0'
 gem 'rails_12factor'
 gem 'jquery-ui-rails'
 
+gem 'omniauth-facebook'
 gem 'redcarpet'
 gem 'github-markup'
 
