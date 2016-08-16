@@ -2,9 +2,22 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <%= link_to new_article_path, class: 'btn btn-primary pull-right' do %>
-        <i class="fa fa-plus-circle"></i> New Article
+    <% if logged_in? %>
+        Signed in as <strong><%= current_user.name %></strong>!
+        <div class="pull-right">
+          <%= link_to signout_path,  class: 'btn btn-default', id: "sign_out" do %>
+            <i class="fa fa-minus-circle"></i> Sign Out
+          <% end %>
+          &nbsp;
+          <%= link_to new_article_path, class: 'btn btn-primary' do %>
+            <i class="fa fa-plus-circle"></i> New Article
+          <% end %>
+        </div>
+    <% else %>
+      <%= link_to "/auth/facebook", id: "sign_in", class: 'pull-right' do %>
+        <i class="fa fa-user"></i> Sign in
       <% end %>
+    <% end %>
     </div>
   </div>
   <div class="row">
@@ -18,10 +31,12 @@
             <div class="col-xs-12 clear-fix"><h1><%= article.title %></h1></div>
             <div class="separator-2 visible-lg col-xs-12"></div>
             <div class="col-xs-12">
+              <% if logged_in? %>
+
               [
-              <%= link_to article, class: 'btn btn-white btn-sm' do %><i class="fa fa-file"></i> Show<% end %>
               <%= link_to edit_article_path(article), class: 'btn btn-white btn-sm' do %><i class="fa fa-pencil"></i> Edit<% end %>
               <%= link_to article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-white btn-sm' do %><i class="fa fa-trash"></i> Delete<% end %> ]<br>
+              <% end %>
               Author: <small><%= article.author.name %></small><br>
               <%= markdown.render(article.body).html_safe %>
             </div>
@@ -31,7 +46,8 @@
         <div class="row">
           <div class="col-xs-12">&nbsp;</div>
         </div>
-    <% end %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

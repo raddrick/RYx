@@ -1,31 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class="container panel panel-default">
   <div class="row panel-body">
-    <p class="form-control-static">
-      <strong class="col-xs-2">Title:</strong>
-      <div class="col-xs-10"><%= @article.title %></div>
-    </p>
-
-    <p class="form-control-static">
-      <strong class="col-xs-2">Stub:</strong>
-      <div class="col-xs-10"><%= @article.stub %></div>
-    </p>
-
-    <p class="form-control-static">
-      <strong class="col-xs-2">Body:</strong>
-      <div class="col-xs-10"><%= @article.body %></div>
-    </p>
-
-    <p class="form-control-static">
-      <strong class="col-xs-2">Landing:</strong>
-      <div class="col-xs-10"><%= @article.landing.id %></div>
-    </p>
-
+    <h1 class="col-xs-10"><%= @article.title %></h1>
+    <div class="col-xs-10"><%= markdown.render(@article.body).html_safe %></div>
     <p class="form-control-static">
       <strong class="col-xs-2">Published:</strong>
       <div class="col-xs-10"><%= @article.published %></div>
     </p>
-
     <p class="form-control-static">
       <strong class="col-xs-2">Author:</strong>
       <div class="col-xs-10"><%= @article.author_id %></div>

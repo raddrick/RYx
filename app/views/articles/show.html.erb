@@ -13,7 +13,7 @@
 
     <p class="form-control-static">
       <strong class="col-xs-2">Body:</strong>
-      <div class="col-xs-10"><%= @article.body %></div>
+      <div class="col-xs-10"><%= markdown.render(@article.body).html_safe %></div>
     </p>
 
     <p class="form-control-static">
