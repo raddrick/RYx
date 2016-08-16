@@ -28,7 +28,6 @@
 //= require jquery.countdown/jquery.plugin
 //= require jquery.countdown/jquery.countdown
 //= require magnific-popup/jquery.magnific-popup
-//= require turbolinks
 //= require bootstrap/bootstrap
 //= require modernizr
 //= require isotope/isotope.pkgd
