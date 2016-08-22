@@ -1,6 +1,24 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="row">
+    <div class="col-xs-12">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="text-center">
+        <h2 class="text-center logo-font margin-clear">Coming Soon</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+    &nbsp;
+    </div>
+  </div>
+
+  <div class="row" style="display: none;">
     <div class="col-xs-8 col-xs-offset-2">
     <% if logged_in? %>
         Signed in as <strong><%= current_user.name %></strong>!
@@ -20,7 +38,7 @@
     <% end %>
     </div>
   </div>
-  <div class="row">
+  <div class="row" style="display: none;">
     <div class="col-xs-12">
     <% @articles.each do |article| %>
       <%# article.published %>
