@@ -19,19 +19,19 @@
                         <!-- main-menu -->
                         <ul class="nav navbar-nav navbar-right" display="none">
 
-                          <li<%= ' class=active' if current_page? root_url%>>
+                          <li class="<%= 'active' if current_page? root_url %>">
                             <%= link_to "Home", root_url %>
                           </li>
-                          <li<%= ' class=active' if current_page? talks_url%>>
+                          <li class="<%= 'active' if current_page? talks_url %>">
                             <%= link_to "Talks", talks_url %>
                           </li>
-                          <li<%= ' class=active' if current_page? about_url%>>
+                          <li class="<%= 'active' if current_page? about_url %>">
                             <%= link_to "About", about_url %>
                           </li>
-                          <li<%= ' class=active' if current_page? team_url%>>
+                          <li class="<%= 'active' if current_page? team_url %>">
                             <%= link_to "Team", team_url %>
                           </li>
-                          <li<%= ' class=active' if current_page? articles_url%>>
+                          <li class="<%= 'active' if current_page? articles_url %>">
                             <%= link_to "Blog", articles_url %>
                           </li>
                         </ul>
