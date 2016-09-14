@@ -25,13 +25,13 @@
                           <li class="<%= 'active' if current_page? talks_url %>">
                             <%= link_to "Talks", talks_url %>
                           </li>
-                          <li class="<%= 'active' if current_page? about_url %>">
+                          <li class="<%= 'active' if current_page? about_url %> hidden">
                             <%= link_to "About", about_url %>
                           </li>
-                          <li class="<%= 'active' if current_page? team_url %>">
+                          <li class="<%= 'active' if current_page? team_url %> hidden">
                             <%= link_to "Team", team_url %>
                           </li>
-                          <li class="<%= 'active' if current_page? articles_url %>">
+                          <li class="<%= 'active' if current_page? articles_url %> hidden">
                             <%= link_to "Blog", articles_url %>
                           </li>
                         </ul>
