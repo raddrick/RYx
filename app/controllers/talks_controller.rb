@@ -4,7 +4,7 @@ class TalksController < ApplicationController
   # GET /talks
   # GET /talks.json
   def index
-    @talks = Talk.all
+    @talks = Talk.all.order('id DESC')
   end
 
   # GET /talks/1
