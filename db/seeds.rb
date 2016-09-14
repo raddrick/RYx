@@ -54,5 +54,72 @@ pamela = Speaker.find_or_create_by name: 'Pamela Welburn',
 puts "Created #{pamela.inspect}"
 puts Talk.find_or_create_by title: 'Sustainable Travel',
           description: '',
-          video: 'V7deLeAQ_0Y',
+          video: 'APwit7xiCPs',
           speaker: pamela
+
+sam = Speaker.find_or_create_by name: 'Sam Pressin',
+          bio: 'Sam Pessin is a lover of travel and a lifelong expat, having spent over 10 years living abroad. He is one of the founders and COO of Remote Year, a year-long work and travel program. Previously, Sam worked at Bain & Co Consulting and a small digital agency called Vokal, both in Chicago.',
+          image_url: 'lisbon/sam'
+puts "Created #{sam.inspect}"
+puts Talk.find_or_create_by title: 'The future of work',
+          description: '',
+          video: 'pG8aZTbbnYE',
+          speaker: sam
+
+saritha = Speaker.find_or_create_by name: 'Saritha Vuppala',
+          bio: 'Saritha Vuppala is originally from India and has been a New Yorker for 14 years. She loves all things comedy, and completed her improv training at The PIT just before joining Remote Year. In addition to being a full-time software developer and news junkie, she likes to take long walks and check her phone in scenic spots.',
+          image_url: 'lisbon/saritha'
+puts "Created #{saritha.inspect}"
+puts Talk.find_or_create_by title: 'The lessons from a year of improv',
+          description: '',
+          video: 'GfiD8JJCd28',
+          speaker: saritha
+
+kyron = Speaker.find_or_create_by name: 'Kyron Gosse',
+          bio: 'After quitting his high paying  job at 24, Kyron jumped feet first into the property market with the determination to ‘make it work’. 5 years later Kyron is now a property entrepreneur, travelling the world, exploring different markets and doing deals in different countries. Thanks to his entrepreneurial approach to investing, Kyron has consistently bought properties and done deals without requiring the banks approval.',
+          image_url: 'lisbon/kyron'
+puts "Created #{kyron.inspect}"
+puts Talk.find_or_create_by title: 'Busting out of the rent trap',
+          description: '',
+          video: 'eG2RrTtXZHg',
+          speaker: kyron
+
+gianna = Speaker.find_or_create_by name: 'Gianna Zoppi',
+          bio: 'Gianna Zoppi is a cinematographer, video editor and avid capoeirista from New Jersey with a passion for athletic, travel and adventure film. As owner of Silver Moth Films, she uses work as a way to pursue her excitement for production and culture. She graduated from Cornell University with a degree in Film Studies, supplemented by work with SONY and Warner Bros. affiliates. She also spent a semester at the Film and TV School of the Academy of Performing Arts in Prague (FAMU) and most recently took her business on the road with Remote Year.',
+          image_url: 'lisbon/gianna'
+puts "Created #{gianna.inspect}"
+puts Talk.find_or_create_by title: 'How the Best Plan can be No Plan',
+          description: '',
+          video: 'sBzeNKe-WPA',
+          speaker: gianna
+
+# sara = Speaker.find_or_create_by name: 'Sara Mosadegh',
+#           bio: '',
+#           image_url: 'rabat/sara'
+# puts "Created #{sara.inspect}"
+# puts Talk.find_or_create_by title: 'Remote Mindfulness',
+#           description: '',
+#           video: 'Qaib1-1Soo8',
+#           speaker: sara
+
+# merlijn = Speaker.find_or_create_by name: 'Merlijn Knol',
+#           bio: '',
+#           image_url: 'rabat/merlijn',
+#           facebook: 'https://www.facebook.com/herwaypodcast/'
+#           # website: 'http://herwaypodcast.com/'
+# puts "Created #{merlijn.inspect}"
+# puts Talk.find_or_create_by title: 'The Girl Effect',
+#           description: '',
+#           video: 'j5YDOhfQeac',
+#           speaker: merlijn
+
+
+# dylan = Speaker.find_or_create_by name: 'Dylan Hoffman',
+#           bio: '',
+#           image_url: 'rabat/dylan'
+# puts "Created #{dylan.inspect}"
+# puts Talk.find_or_create_by title: 'Finding the Human Moment: A Journey to Emotional Intelligence',
+#           description: '',
+#           video: 'j-MSFPKKYN8',
+#           speaker: dylan
+
