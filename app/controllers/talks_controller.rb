@@ -64,7 +64,7 @@ class TalksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_talk
-      @talk = Talk.find(params[:id])
+      @talk = Talk.find_by(slug: params[:slug])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
