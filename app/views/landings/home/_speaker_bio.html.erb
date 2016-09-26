@@ -14,5 +14,5 @@
               <% end %>
             </ul>
             <div class="separator-<%= config == 1 ? 2 : 3 %> visible-lg"></div>
-              <p><%= speaker.bio %></p>
+              <p><%= Markdown.new(speaker.bio).to_html.html_safe %></p>
             <div class="separator-<%= config == 1 ? 3 : 2 %> visible-lg"></div>

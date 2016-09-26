@@ -57,27 +57,12 @@ puts Talk.find_or_create_by title: 'Sustainable Travel',
           video: 'APwit7xiCPs',
           speaker: pamela
 
-sam = Speaker.find_or_create_by name: 'Sam Pressin',
-          bio: 'Sam Pessin is a lover of travel and a lifelong expat, having spent over 10 years living abroad. He is one of the founders and COO of Remote Year, a year-long work and travel program. Previously, Sam worked at Bain & Co Consulting and a small digital agency called Vokal, both in Chicago.',
-          image_url: 'lisbon/sam'
-puts "Created #{sam.inspect}"
-puts Talk.find_or_create_by title: 'The future of work',
-          description: '',
-          video: 'pG8aZTbbnYE',
-          speaker: sam
-
-saritha = Speaker.find_or_create_by name: 'Saritha Vuppala',
-          bio: 'Saritha Vuppala is originally from India and has been a New Yorker for 14 years. She loves all things comedy, and completed her improv training at The PIT just before joining Remote Year. In addition to being a full-time software developer and news junkie, she likes to take long walks and check her phone in scenic spots.',
-          image_url: 'lisbon/saritha'
-puts "Created #{saritha.inspect}"
-puts Talk.find_or_create_by title: 'The lessons from a year of improv',
-          description: '',
-          video: 'GfiD8JJCd28',
-          speaker: saritha
-
 kyron = Speaker.find_or_create_by name: 'Kyron Gosse',
           bio: 'After quitting his high paying  job at 24, Kyron jumped feet first into the property market with the determination to ‘make it work’. 5 years later Kyron is now a property entrepreneur, travelling the world, exploring different markets and doing deals in different countries. Thanks to his entrepreneurial approach to investing, Kyron has consistently bought properties and done deals without requiring the banks approval.',
-          image_url: 'lisbon/kyron'
+          image_url: 'lisbon/kyron',
+          facebook: 'https://www.facebook.com/kyrongosse2/',
+          twitter: 'http://www.twitter.com/kyrongosse',
+          instagram: 'http://www.instagram.com/kyrongosse'
 puts "Created #{kyron.inspect}"
 puts Talk.find_or_create_by title: 'Busting out of the rent trap',
           description: '',
@@ -89,37 +74,71 @@ gianna = Speaker.find_or_create_by name: 'Gianna Zoppi',
           image_url: 'lisbon/gianna'
 puts "Created #{gianna.inspect}"
 puts Talk.find_or_create_by title: 'How the Best Plan can be No Plan',
-          description: '',
+          description: 'https://www.instagram.com/gigi_zop',
           video: 'sBzeNKe-WPA',
           speaker: gianna
 
-# sara = Speaker.find_or_create_by name: 'Sara Mosadegh',
-#           bio: '',
-#           image_url: 'rabat/sara'
-# puts "Created #{sara.inspect}"
-# puts Talk.find_or_create_by title: 'Remote Mindfulness',
-#           description: '',
-#           video: 'Qaib1-1Soo8',
-#           speaker: sara
+sam = Speaker.find_or_create_by name: 'Sam Pressin',
+          bio: 'Sam Pessin is a lover of travel and a lifelong expat, having spent over 10 years living abroad. He is one of the founders and COO of Remote Year, a year-long work and travel program. Previously, Sam worked at Bain & Co Consulting and a small digital agency called Vokal, both in Chicago.',
+          image_url: 'lisbon/sam',
+          facebook: 'https://www.facebook.com/remoteyear',
+          instagram: 'https://www.instagram.com/remoteyear/'
+puts "Created #{sam.inspect}"
+puts Talk.find_or_create_by title: 'The future of work',
+          description: '',
+          video: 'pG8aZTbbnYE',
+          speaker: sam
 
-# merlijn = Speaker.find_or_create_by name: 'Merlijn Knol',
-#           bio: '',
-#           image_url: 'rabat/merlijn',
-#           facebook: 'https://www.facebook.com/herwaypodcast/'
-#           # website: 'http://herwaypodcast.com/'
-# puts "Created #{merlijn.inspect}"
-# puts Talk.find_or_create_by title: 'The Girl Effect',
-#           description: '',
-#           video: 'j5YDOhfQeac',
-#           speaker: merlijn
+saritha = Speaker.find_or_create_by name: 'Saritha Vuppala',
+          bio: 'Saritha Vuppala is originally from India and has been a New Yorker for 14 years. She loves all things comedy, and completed her improv training at The PIT just before joining Remote Year. In addition to being a full-time software developer and news junkie, she likes to take long walks and check her phone in scenic spots.',
+          image_url: 'lisbon/saritha',
+          facebook: 'http://www.facebook.com/sarithav',
+          twitter: 'https://twitter.com/sarithavee',
+          instagram: 'http://www.instagram.com/sarivee'
+puts "Created #{saritha.inspect}"
+puts Talk.find_or_create_by title: 'The lessons from a year of improv',
+          description: '',
+          video: 'GfiD8JJCd28',
+          speaker: saritha
 
+sara = Speaker.find_or_create_by name: 'Sara Mosadegh',
+          bio: '',
+          image_url: 'rabat/sara',
+          linkedin: 'https://www.linkedin.com/in/sara-mosadegh-7797a145'
+puts "Created #{sara.inspect}"
+puts Talk.find_or_create_by title: 'Remote Mindfulness',
+          description: '',
+          video: 'Qaib1-1Soo8',
+          speaker: sara
 
-# dylan = Speaker.find_or_create_by name: 'Dylan Hoffman',
-#           bio: '',
-#           image_url: 'rabat/dylan'
-# puts "Created #{dylan.inspect}"
-# puts Talk.find_or_create_by title: 'Finding the Human Moment: A Journey to Emotional Intelligence',
-#           description: '',
-#           video: 'j-MSFPKKYN8',
-#           speaker: dylan
+merlijn = Speaker.find_or_create_by name: 'Merlijn Knol',
+          bio: 'Checkout my website: [http://herwaypodcast.com/](http://herwaypodcast.com/) as well as the [facebook group](https://www.facebook.com/groups/581875088643109/).',
+          image_url: 'rabat/merlijn',
+          facebook: 'https://www.facebook.com/herwaypodcast/'
+          # website: 'http://herwaypodcast.com/'
+puts "Created #{merlijn.inspect}"
+puts Talk.find_or_create_by title: 'The Girl Effect',
+          description: '',
+          video: 'j5YDOhfQeac',
+          speaker: merlijn
+dylan = Speaker.find_or_create_by name: 'Dylan Hoffman',
+          bio: 'Checkout my website [http://findemtandem.com/](http://findemtandem.com/)',
+          image_url: 'rabat/dylan'
+puts "Created #{dylan.inspect}"
+puts Talk.find_or_create_by title: 'Finding the Human Moment: A Journey to Emotional Intelligence',
+          description: '',
+          video: 'j-MSFPKKYN8',
+          speaker: dylan
+
+dana = Speaker.find_or_create_by name: 'Dana Reinert',
+          bio: 'Checkout my website [http://danareinert.com/](http://danareinert.com/)',
+          image_url: 'rabat/dana',
+          instagram: 'http://www.instagram.com/trackdana',
+          facebook: 'https://m.facebook.com/trackdana/',
+          linkedin: 'http://www.linkedin.com/in/reinertdana'
+puts "Created #{dana.inspect}"
+puts Talk.find_or_create_by title: 'Finding the Human Moment: A Journey to Emotional Intelligence',
+          description: '',
+          video: 'PBVEQdTWd-w',
+          speaker: dana
 
