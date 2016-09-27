@@ -22,7 +22,7 @@
   <div class="col-xs-12 col-md-8">
     <div class="v-sm-offset-2 v-md-offset-4">
       <div class="separator-1"></div>
-        <p><%= speaker.bio %></p>
+        <p><%= Markdown.new(speaker.bio).to_html.html_safe %></p>
       <div class="separator-1"></div>
     </div>
   </div>
