@@ -1,28 +1,22 @@
-== README
+== RYx
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Inspired by TEDx, Magellan is thrilled to announce that they’ve launched RYx, a monthly speaker and networking series devoted to spreading ideas in the form of short, dynamic talks.
 
-Things you may want to cover:
+At the inaugural event ­ RYxValencia ­ five Remotes stepped on the stage to passionately share their expertise and spark conversation around the theme BEGINNINGS, discussing everything from sustainable travel to how to gracefully be terminated from a job to what makes a story remarkable.
 
-* Ruby version
+The events are 100% supported by the Magellan ecosystem and they look forward to creating a turnkey program for all of Remote Year to launch in their respective communities.
 
-* System dependencies
+== Installation
 
-* Configuration
+Clone the repository
 
-* Database creation
+ruby -v
 
-* Database initialization
+gem install bundler
 
-* How to run the test suite
+bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+rails s
 
-* Deployment instructions
+http://localhost:3000
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

@@ -16,22 +16,22 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   get 'talks' => 'talks#index'
-  get 'talks/:slug' => 'talks#show'
+  get 'talks/:slug' => 'talks#show', as: 'talk'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
   # resources :landings
-  # resources :speakers
-  # resources :talks
+  resources :speakers
+  resources :talks
   resources :articles
-  # resources :users
+  resources :users
 
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: redirect('/')
 
   get 'signout', to: 'sessions#destroy', as: 'signout'
-  get '/talks/:id(.:format)' =>'talks#show', as: 'talk'
+  # get '/talks/:id(.:format)' =>'talks#show', as: 'talk'
 
   # Example resource route with options:
   #   resources :products do
